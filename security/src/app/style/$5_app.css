@@ -1,0 +1,41 @@
+/* =================================
+    
+==================================== */
+
+.app {
+   position: relative;
+   min-height: 100lvh;
+   width: 100%;
+}
+
+.app-container {
+   margin: 0 auto;
+   max-width: 1440px;
+   width: 100%;
+   min-height: 100lvh;
+}
+
+.main {
+   padding: 10px;
+   width: 100%;
+   min-height: 100lvh;
+   /* background-color: rgba(255, 255, 255, .1); */
+}
+
+/* =================================
+   MEDIA
+==================================== */
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 500px) {}
+
+@media (max-width: 425px) {}
+
+@media (max-width: 375px) {}
+
+@media (max-width: 320px) {}
+
+/* ============ END :) ============ */

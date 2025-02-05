@@ -3,7 +3,13 @@ function App() {
 
    return (
       <>
-         <h1>SECURITY</h1>
+         <div className="app">
+            <div className="app-container">
+               <main className="main">
+                  <h1>SECURITY</h1>
+               </main>
+            </div>
+         </div>
       </>
    )
 }

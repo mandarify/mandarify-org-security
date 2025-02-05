@@ -1,0 +1,63 @@
+/* =================================
+    
+==================================== */
+
+body {
+   position: relative;
+   background-color: #121315;
+   background-image: radial-gradient(circle, rgba(255, 255, 255, .1) 2px, transparent 2px);
+   background-size: 10px 10px, cover;
+   background-blend-mode: soft-light;
+   pointer-events: none;
+}
+
+body::after,
+body::before {
+   display: none;
+   z-index: -1;
+   content: "";
+   position: absolute;
+   bottom: -672px;
+
+   width: 1344px;
+   height: 1344px;
+
+   /* filter: blur(1000px); */
+
+   border-radius: 50%;
+   pointer-events: none;
+}
+
+body::after {
+   left: -672px;
+   /* background-color: rgba(34, 86, 255, .2); */
+}
+
+body::before {
+   right: -672px;
+   /* background-color: rgba(115, 34, 255, .2); */
+}
+
+#wrapper {
+   position: relative;
+   min-width: 320px;
+   min-height: 100lvh;
+}
+
+/* =================================
+   MEDIA
+==================================== */
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 500px) {}
+
+@media (max-width: 425px) {}
+
+@media (max-width: 375px) {}
+
+@media (max-width: 320px) {}
+
+/* ============ END :) ============ */

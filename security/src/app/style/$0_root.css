@@ -1,0 +1,40 @@
+/* =================================
+    
+==================================== */
+
+:root {
+   /* ===== NORMALIZE ===== */
+
+   /* Шрифт */
+   --f-family: "Montserrat", serif;
+   --f-optical-sizing: auto;
+   --f-weight: 400;
+   --f-style: normal;
+
+   /* Текст */
+   --text-color: #ffffff;
+
+   /* Убирает синий фон объектов которые выделяются */
+   --tap-bg: rgba(0, 0, 0, 0);
+
+   /* Цвет выделенного текста */
+   --selection: rgba(255, 255, 255, 0.2);
+}
+
+/* =================================
+   MEDIA
+==================================== */
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 500px) {}
+
+@media (max-width: 425px) {}
+
+@media (max-width: 375px) {}
+
+@media (max-width: 320px) {}
+
+/* ============ END :) ============ */
