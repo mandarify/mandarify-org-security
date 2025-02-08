@@ -14,6 +14,7 @@ const config: StorybookConfig = {
    },
    docs: {
       autodocs: 'tag',
-   }
+   },
+   logLevel: 'error'
 };
 export default config;

@@ -1,10 +1,10 @@
-import { ReactNode, memo } from "react";
+import { JSX, memo } from "react";
 import SvgIcon from "../SvgIcon/SvgIcon";
 import "./ButtonLink.css";
 
 
 export interface IButtonLink {
-   children: ReactNode,       // Svg компонент
+   children: JSX.Element,       // Svg компонент
    boxClass?: string,         // Родительский класс
    href?: string,             // Ссылка или якорь
    text?: string | null,      // Название кнопки

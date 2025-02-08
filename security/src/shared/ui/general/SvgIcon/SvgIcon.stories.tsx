@@ -4,21 +4,26 @@ import { PictureSVG } from "../../../icons";
 import "../../../../app/style/index.css";
 
 
-const meta: Meta<typeof SvgIcon> = {
+const meta = {
    title: 'Shared/SvgIcon',
    component: SvgIcon,
-   tags: ['autodigs'],
-};
+   parameters: {
+      layout: 'centered',
+   },
+   tags: ['autodocs'],
+   args: {
+      boxClass: '',
+   }
+} satisfies Meta<typeof SvgIcon>;
 
 export default meta;
 
 
-type Story = StoryObj<typeof SvgIcon>;
+type Story = StoryObj<typeof meta>;
 
 export const Test: Story = {
    args: {
       children: <PictureSVG />,
-      boxClass: '',
       iconSize: 16,
    }
 }
