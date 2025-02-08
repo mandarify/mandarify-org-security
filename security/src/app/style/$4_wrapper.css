@@ -4,41 +4,13 @@
 
 body {
    position: relative;
-   background-color: #121315;
-   background-image: radial-gradient(circle, rgba(255, 255, 255, .1) 2px, transparent 2px);
-   background-size: 10px 10px, cover;
-   background-blend-mode: soft-light;
-   pointer-events: none;
-}
-
-body::after,
-body::before {
-   display: none;
-   z-index: -1;
-   content: "";
-   position: absolute;
-   bottom: -672px;
-
-   width: 1344px;
-   height: 1344px;
-
-   /* filter: blur(1000px); */
-
-   border-radius: 50%;
-   pointer-events: none;
-}
-
-body::after {
-   left: -672px;
-   /* background-color: rgba(34, 86, 255, .2); */
-}
-
-body::before {
-   right: -672px;
-   /* background-color: rgba(115, 34, 255, .2); */
+   background: var(--bg-pattern), var(--bg-second), var(--bg-main);
+   background-size: 10px 10px, cover, cover;
+   background-blend-mode: soft-light, normal, normal;
 }
 
 #wrapper {
+   z-index: var(--z-index-1);
    position: relative;
    min-width: 320px;
    min-height: 100lvh;

@@ -1,8 +1,13 @@
+import { Header as DesktopHeader } from "../widgets/desktop/index";
+
 
 function App() {
 
    return (
       <>
+
+         <DesktopHeader />
+
          <div className="app">
             <div className="app-container">
                <main className="main">
@@ -10,6 +15,7 @@ function App() {
                </main>
             </div>
          </div>
+
       </>
    )
 }

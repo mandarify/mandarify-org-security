@@ -10,16 +10,15 @@
 
 .app-container {
    margin: 0 auto;
-   max-width: 1440px;
+   max-width: 1364px;
    width: 100%;
    min-height: 100lvh;
 }
 
 .main {
-   padding: 10px;
+   padding: calc(2 * var(--indent-1) + var(--header-h)) var(--indent-1) var(--indent-1);
    width: 100%;
    min-height: 100lvh;
-   /* background-color: rgba(255, 255, 255, .1); */
 }
 
 /* =================================

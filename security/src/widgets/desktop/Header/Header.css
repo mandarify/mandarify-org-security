@@ -1,0 +1,62 @@
+/* =================================
+    
+==================================== */
+
+.header {
+   z-index: var(--z-index-2);
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+
+   padding: 10px;
+   margin: var(--indent-1);
+   height: var(--header-h);
+   border-radius: var(--radius-1);
+   border: var(--border-size-main) solid var(--border-color-main);
+   background-color: var(--block-bg-1);
+   backdrop-filter: var(--blur-main);
+
+   display: grid;
+   grid-template-columns: 1fr minmax(auto, 1364px) 1fr;
+   align-items: center;
+}
+
+.header__left {
+   min-width: 200px;
+   height: 100%;
+   background-color: tomato;
+}
+
+.header__center {
+   max-width: 1364px;
+   width: 100%;
+   height: 100%;
+   background-color: green;
+}
+
+.header__right {
+   height: 100%;
+
+   display: flex;
+   align-items: center;
+   justify-content: end;
+}
+
+/* =================================
+   MEDIA
+==================================== */
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 500px) {}
+
+@media (max-width: 425px) {}
+
+@media (max-width: 375px) {}
+
+@media (max-width: 320px) {}
+
+/* ============ END :) ============ */

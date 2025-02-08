@@ -1,0 +1,92 @@
+/* =================================
+    
+==================================== */
+
+.button-link {
+   padding: var(--indent-4);
+   width: max-content;
+   height: max-content;
+
+   display: grid;
+   grid-template-columns: auto auto;
+   gap: var(--indent-4);
+   place-items: center;
+
+   border-radius: var(--radius-3);
+   border: var(--border-size-main) solid var(--border-color-main);
+   background-color: var(--block-bg-1);
+
+   opacity: var(--opacity-80);
+   transition: opacity var(--duration-s) ease-in-out;
+}
+
+.button-link .button-link__text {
+   margin-right: var(--indent-4);
+   font-size: 14px;
+   font-weight: 500;
+   color: var(--text--unactive-color);
+}
+
+.button-link svg path {
+   fill: var(--text--unactive-color);
+}
+
+/* =================================
+   Box classes
+==================================== */
+
+.donation {
+   border: var(--border-size-main) solid var(--geld-10);
+   background-color: var(--geld-10);
+}
+
+.donation_long {
+   width: max-content;
+   height: 30px;
+}
+
+.donation .button-link__text {
+   color: var(--geld-100);
+}
+
+.donation svg path {
+   fill: var(--geld-100);
+}
+
+/* =================================
+   MEDIA
+==================================== */
+
+@media (hover: hover) {
+   .button-link:hover {
+      opacity: var(--opacity-100);
+   }
+
+   .button-link:hover svg {
+      animation: storm var(--duration-m) ease-in-out;
+   }
+}
+
+@media (hover: none) {
+   .button-link:active {
+      opacity: var(--opacity-100);
+   }
+
+   .button-link:active svg {
+      animation: storm var(--duration-m) ease-in-out;
+   }
+}
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 500px) {}
+
+@media (max-width: 425px) {}
+
+@media (max-width: 375px) {}
+
+@media (max-width: 320px) {}
+
+/* ============ END :) ============ */
