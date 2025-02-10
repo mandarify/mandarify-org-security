@@ -1,20 +1,26 @@
-import { JSX, memo } from "react";
+import { JSX, memo, useRef, useEffect } from "react";
 import "./SvgIcon.css";
 
 
 export interface ISvgIcon {
-   children: JSX.Element,       // Svg компонент
-   boxClass?: string,         // Родительский класс
-   iconSize?: number,         // Размеры для коробки иконки
+   children: JSX.Element,
+   boxClass?: string,
+   iconSize?: number,
 };
 
 
 const SvgIcon = ({ children, boxClass = '', iconSize = 16 }: ISvgIcon) => {
-   return (
-      <div className={`icon-svg-box ${boxClass}`} style={{ width: iconSize + 'px' }}>
-         {children}
-      </div>
-   )
+
+   const svgBox = useRef<HTMLDivElement>(null);
+
+   useEffect(() => {
+      if (svgBox.current) {
+         svgBox.current.style.width = iconSize + 'px';
+         svgBox.current.style.height = iconSize + 'px';
+      }
+   }, [iconSize]);
+
+   return <div className={`icon-svg-box ${boxClass}`} ref={svgBox}>{children}</div>;
 };
 
 

@@ -34,6 +34,7 @@ const meta = {
          description: 'Размер иконки.'
       },
    }
+
 } satisfies Meta<typeof SvgIcon>;
 
 export default meta;

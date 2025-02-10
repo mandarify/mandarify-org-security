@@ -9,38 +9,198 @@
    left: 0;
    right: 0;
 
-   padding: 10px;
+   padding: 10px 0;
    margin: var(--indent-1);
    height: var(--header-h);
    border-radius: var(--radius-1);
-   border: var(--border-size-main) solid var(--border-color-main);
-   background-color: var(--block-bg-1);
-   backdrop-filter: var(--blur-main);
+   /* border: var(--border-size-main) solid var(--border-color-main); */
+   /* background-color: var(--block-bg-1); */
+
+   /* -webkit-backdrop-filter: var(--blur-main); */
+   /* backdrop-filter: var(--blur-main); */
 
    display: grid;
    grid-template-columns: 1fr minmax(auto, 1364px) 1fr;
+   grid-template-rows: 100%;
    align-items: center;
+   gap: var(--indent-0);
 }
 
 .header__left {
-   min-width: 200px;
    height: 100%;
-   background-color: tomato;
 }
 
 .header__center {
    max-width: 1364px;
    width: 100%;
    height: 100%;
-   background-color: green;
+   /* background-color: green; */
+
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 48px;
 }
 
 .header__right {
    height: 100%;
 
    display: flex;
+   gap: 12px;
    align-items: center;
    justify-content: end;
+}
+
+/* =================================
+   LOGO
+==================================== */
+
+.logo {
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: start;
+}
+
+.logo__icon {
+   height: 100%;
+}
+
+.logo__name {
+   margin: 0 6px;
+   font-size: 24px;
+   font-weight: 700;
+   text-transform: capitalize;
+   color: white;
+}
+
+/* =================================
+   NAVI
+==================================== */
+
+.navi {
+   height: 100%;
+}
+
+.navi__list {
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: start;
+   gap: 2px;
+}
+
+.navi__item {
+   height: 30px;
+}
+
+.navi-link {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   padding: 0 var(--indent-3);
+   width: max-content;
+   height: 100%;
+
+   border-radius: var(--radius-3);
+   border: var(--border-size-main) solid transparent;
+
+   transition:
+      border-color var(--duration-s) ease-out,
+      background-color var(--duration-s) ease-out;
+}
+
+.navi-link span {
+   font-size: 14px;
+   font-weight: 500;
+   color: var(--text--unactive-color);
+}
+
+.navi-link._navi-link-active {
+   border-color: var(--border-color-main);
+   background-color: var(--block-bg-1);
+
+   -webkit-backdrop-filter: var(--blur-main);
+   backdrop-filter: var(--blur-main);
+}
+
+.navi-link._navi-link-active span {
+   color: var(--text-color);
+}
+
+.navi-link.navi-link_brand span {
+   background: var(--brand-color-main);
+   -webkit-background-clip: text;
+   background-clip: text;
+   color: transparent;
+}
+
+@media (hover: hover) {
+   .navi-link:not(._navi-link-active):hover {
+      color: var(--text-color);
+      border-color: var(--border-color-main);
+      background-color: var(--block-bg-1);
+
+      -webkit-backdrop-filter: var(--blur-main);
+      backdrop-filter: var(--blur-main);
+   }
+
+   .navi-link.navi-link_brand:not(._navi-link-active):hover {
+      background: var(--brand-color-main-10);
+   }
+}
+
+/* =================================
+   Search reliability
+==================================== */
+
+.reliability {
+   display: flex;
+   align-items: center;
+   justify-content: start;
+   gap: 12px;
+
+   flex: 1 1 100%;
+}
+
+.search-box {
+   padding: var(--indent-4) var(--indent-3) var(--indent-4) var(--indent-4);
+   height: 30px;
+   border-radius: 100px;
+
+   border: var(--border-size-main) solid var(--border-color-main);
+   background-color: var(--block-bg-1);
+
+   -webkit-backdrop-filter: var(--blur-main);
+   backdrop-filter: var(--blur-main);
+
+   display: flex;
+   align-items: center;
+   justify-content: start;
+   gap: 6px;
+   flex: 1 1 auto;
+}
+
+.search__icon {
+   width: 16px;
+   height: 16px;
+   opacity: .4;
+}
+
+.search__input {
+   background: none;
+   border: none;
+   width: 100%;
+   height: 100%;
+
+   font-size: 12px;
+   font-weight: 500;
+   color: var(--text-color);
+}
+
+.search__input::placeholder {
+   color: rgba(255, 255, 255, .4);
 }
 
 /* =================================

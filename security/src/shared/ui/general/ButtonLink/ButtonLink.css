@@ -8,50 +8,96 @@
    height: max-content;
 
    display: grid;
-   grid-template-columns: auto auto;
-   gap: var(--indent-4);
-   place-items: center;
+   grid-template-columns: max-content max-content;
+   align-items: center;
+   justify-content: center;
 
    border-radius: var(--radius-3);
    border: var(--border-size-main) solid var(--border-color-main);
    background-color: var(--block-bg-1);
 
+   -webkit-backdrop-filter: var(--blur-main);
+   backdrop-filter: var(--blur-main);
+
    opacity: var(--opacity-80);
    transition: opacity var(--duration-s) ease-in-out;
 }
 
+.button-link._width_fill {
+   width: 100%;
+}
+
 .button-link .button-link__text {
-   margin-right: var(--indent-4);
+   margin: 0 var(--indent-4);
    font-size: 14px;
    font-weight: 500;
    color: var(--text--unactive-color);
 }
 
-.button-link svg path {
+.button-link path {
    fill: var(--text--unactive-color);
 }
 
+.button-link:active {
+   animation: gum var(--duration-m) ease-out;
+}
+
 /* =================================
-   Box classes
+   Box classes - donation
 ==================================== */
 
 .donation {
+   height: 30px;
    border: var(--border-size-main) solid var(--geld-10);
    background-color: var(--geld-10);
-}
-
-.donation_long {
-   width: max-content;
-   height: 30px;
 }
 
 .donation .button-link__text {
    color: var(--geld-100);
 }
 
-.donation svg path {
+.donation path {
    fill: var(--geld-100);
 }
+
+/* =================================
+   Box classes - instruction
+==================================== */
+
+.instruction {
+   height: 30px;
+}
+
+.instruction .button-link__text {
+   font-size: 12px;
+   font-weight: 600;
+   color: var(--orange-light-1);
+}
+
+.instruction path {
+   stroke: var(--border-size-icon) solid var(--orange-dark-1);
+   fill: var(--orange-light-1);
+}
+
+/* =================================
+   Box classes - faq
+==================================== */
+
+.faq {
+   height: 30px;
+}
+
+.faq .button-link__text {
+   font-size: 12px;
+   font-weight: 600;
+   color: var(--salad-light-1);
+}
+
+.faq path {
+   stroke: var(--border-size-icon) solid var(--salad-dark-1);
+   fill: var(--salad-light-1);
+}
+
 
 /* =================================
    MEDIA

@@ -36,6 +36,7 @@
    /* -------------------- Отступы */
 
    /* Глобальный отступ */
+   --indent-0: 48px;
    --indent-1: 24px;
    --indent-2: 18px;
    --indent-3: 12px;
@@ -65,6 +66,7 @@
 
    /* Основной стандартный размер для границы всех блоков */
    --border-size-main: .5px;
+   --border-size-icon: .2px;
 
    /* ===================================
       Функции
@@ -73,7 +75,7 @@
    /* -------------------- Фильтры */
 
    /* Рамытие для блоков */
-   --blur-main: blur(10px);
+   --blur-main: blur(6px);
 
 
    /* ===================================
@@ -86,7 +88,8 @@
    --bg-main: #121315;
 
    /* Дополнительный цвет (прозрачный градиент) */
-   --bg-second: linear-gradient(to right, rgba(34, 86, 255, .05), rgba(115, 34, 255, .05));
+   /* --bg-second: linear-gradient(to right, rgba(34, 86, 255, .05), rgba(115, 34, 255, .05)); */
+   --bg-second: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
 
    /* Узор фона */
    --bg-pattern: radial-gradient(circle, rgba(255, 255, 255, .1) 2px, transparent 1px);
@@ -97,7 +100,7 @@
    /* -------------------- Текст */
 
    /* Основной цвет текста */
-   --text-color: rgba(255, 255, 255, 1);
+   --text-color: rgba(255, 255, 255, 0.8);
    --text--unactive-color: rgba(255, 255, 255, .6);
 
 
@@ -107,11 +110,27 @@
    --geld-60: rgba(255, 221, 0, .6);
    --geld-10: rgba(255, 221, 0, .1);
 
+   --orange-light-1: rgba(233, 160, 109, 1);
+   --orange-dark-1: rgba(126, 70, 30, 1);
+
+   --salad-light-1: rgba(204, 233, 109, 1);
+   --salad-dark-1: rgb(96, 125, 0, 1);
+
+   --green-light-100: rgba(170, 255, 118, 1);
+   --green-light-80: rgba(170, 255, 118, .8);
+   --green-light-60: rgba(170, 255, 118, .6);
+   --green-light-30: rgba(170, 255, 118, .3);
+   --green-light-10: rgba(170, 255, 118, .1);
+
+   --brand-color-main: linear-gradient(to right, rgba(34, 195, 255, 1), rgba(0, 143, 245, 1));
+   --brand-color-main-10: linear-gradient(to right, rgba(34, 195, 255, .1), rgba(0, 143, 245, .1));
+
 
    /* -------------------- Граница */
 
    /* Основной цвет для границ всех блоков */
    --border-color-main: rgba(255, 255, 255, .05);
+   --border-color-hover: rgba(255, 255, 255, .1);
 
    /* -------------------- Дополнительно */
 

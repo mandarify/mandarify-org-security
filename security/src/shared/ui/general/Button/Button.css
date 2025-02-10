@@ -2,9 +2,208 @@
     
 ==================================== */
 
+.button {
+   padding: var(--indent-4);
+   width: max-content;
+   height: max-content;
+
+   display: grid;
+   grid-template-columns: max-content max-content;
+   align-items: center;
+   justify-content: center;
+
+   border-radius: var(--radius-3);
+   border: var(--border-size-main) solid var(--border-color-main);
+   background-color: var(--block-bg-1);
+
+   -webkit-backdrop-filter: var(--blur-main);
+   backdrop-filter: var(--blur-main);
+
+   opacity: var(--opacity-80);
+   transition:
+      opacity var(--duration-s) ease-in-out,
+      transform var(--duration-s) ease-in-out;
+
+   cursor: pointer;
+}
+
+.button._width_fill {
+   width: 100%;
+}
+
+.button._bg_transparent {
+   border: var(--border-size-main) solid transparent;
+   background-color: transparent;
+
+   transition:
+      border-color var(--duration-s) ease-in-out,
+      background-color var(--duration-s) ease-in-out;
+}
+
+.button._border_circle {
+   border-radius: 100px;
+}
+
+.button:active {
+   animation: gum var(--duration-m) ease-out;
+}
+
+.button__text {
+   margin: 0 var(--indent-4);
+   font-size: 14px;
+   font-weight: 500;
+   color: var(--text--unactive-color);
+}
+
+.button path {
+   fill: var(--text--unactive-color);
+}
+
+/* =================================
+   Box classes - button_settings
+==================================== */
+
+.button_settings {
+   padding: 0;
+   width: 30px;
+   height: 30px;
+}
+
+/* =================================
+   Box classes - button_reliability
+==================================== */
+
+.button_reliability {
+   height: 30px;
+   transition:
+      border-color var(--duration-s) ease-out,
+      background-color var(--duration-s) ease-out;
+}
+
+.button_reliability .button__text {
+   font-size: 12px;
+   transition: color var(--duration-s) ease-out;
+}
+
+/* =================================
+   Box classes - button_main
+==================================== */
+
+.button_main {
+   border: none;
+   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), var(--brand-color-main);
+   background-size: cover, cover;
+   background-blend-mode: normal, normal;
+   opacity: var(--opacity-100);
+}
+
+.button_main .button__text {
+   color: var(--text-color);
+}
+
+.button_main path {
+   fill: var(--text-color);
+}
+
+
+
 /* =================================
    MEDIA
 ==================================== */
+
+@media (hover: hover) {
+   .button:hover {
+      border: var(--border-size-main) solid var(--border-color-hover);
+      opacity: var(--opacity-100);
+   }
+
+   .button:hover .button__text {
+      color: var(--text-color);
+   }
+
+   .button:hover svg {
+      animation: storm var(--duration-m) ease-in-out;
+   }
+
+   .button:hover path {
+      fill: var(--text-color);
+   }
+
+   .button._bg_transparent:hover {
+      border: var(--border-size-main) solid var(--border-color-hover);
+      background-color: var(--block-bg-1);
+   }
+
+   /* button_reliability */
+
+   .button_reliability:hover {
+      border: var(--border-size-main) solid var(--green-light-30);
+      background-color: var(--green-light-10);
+   }
+
+   .button_reliability._bg_transparent:hover {
+      border: var(--border-size-main) solid var(--green-light-30);
+      background-color: var(--green-light-10);
+   }
+
+   .button_reliability:hover .button__text {
+      color: var(--green-light-100);
+   }
+
+   .button_reliability:hover path {
+      fill: var(--green-light-100);
+   }
+
+   /* button_main  */
+
+   .button_main:hover {
+      border: none;
+   }
+}
+
+@media (hover: none) {
+   .button:active {
+      border: var(--border-size-main) solid var(--border-color-hover);
+      opacity: var(--opacity-100);
+   }
+
+   .button:active .button__text {
+      color: var(--text-color);
+   }
+
+   .button:active svg {
+      animation: storm var(--duration-m) ease-in-out;
+   }
+
+   .button:active path {
+      fill: var(--text-color);
+   }
+
+   .button._bg_transparent:active {
+      border: var(--border-size-main) solid var(--border-color-hover);
+      background-color: var(--block-bg-1);
+   }
+
+   /* button_reliability */
+
+   .button_reliability:active {
+      border: var(--border-size-main) solid var(--green-light-30);
+      background-color: var(--green-light-10);
+   }
+
+   .button_reliability._bg_transparent:active {
+      border: var(--border-size-main) solid var(--green-light-30);
+      background-color: var(--green-light-10);
+   }
+
+   .button_reliability:active .button__text {
+      color: var(--green-light-100);
+   }
+
+   .button_reliability:active path {
+      fill: var(--green-light-100);
+   }
+}
 
 @media (max-width: 1024px) {}
 

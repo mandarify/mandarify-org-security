@@ -2,15 +2,12 @@
     
 ==================================== */
 
-.icon-svg-box {
-   aspect-ratio: 1/1;
-}
+.icon-svg-box {}
 
 .icon-svg-box svg {
    object-fit: cover;
    width: 100%;
    height: 100%;
-   aspect-ratio: 1/1;
 }
 
 
