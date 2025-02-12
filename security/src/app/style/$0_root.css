@@ -8,7 +8,7 @@
       Шрифт
    ====================================== */
 
-   --f-family: "Montserrat", serif;
+   --f-family: "Montserrat", sans-serif;
    --f-optical-sizing: auto;
    --f-weight: 400;
    --f-style: normal;
@@ -34,6 +34,16 @@
    --header-h: 60px;
 
    /* -------------------- Отступы */
+
+   /* Text */
+   --h1: 24px;
+   --h2: 22px;
+   --h3: 20px;
+   --h4: 18px;
+   --h5: 16px;
+   --h6: 14px;
+   --h7: 12px;
+   --h8: 10px;
 
    /* Глобальный отступ */
    --indent-0: 48px;
@@ -65,7 +75,7 @@
    /* -------------------- Граница */
 
    /* Основной стандартный размер для границы всех блоков */
-   --border-size-main: .5px;
+   --border-size-main: 1px;
    --border-size-icon: .2px;
 
    /* ===================================
@@ -95,26 +105,47 @@
    --bg-pattern: radial-gradient(circle, rgba(255, 255, 255, .1) 2px, transparent 1px);
 
    /* -------------------- Блоки */
-   --block-bg-1: rgba(255, 255, 255, .05);
+   --block-bg-unactive: rgba(255, 255, 255, .05);
+   --block-bg-hover: rgba(255, 255, 255, .1);
 
    /* -------------------- Текст */
 
    /* Основной цвет текста */
+   --accent-color: rgba(255, 255, 255, 1);
    --text-color: rgba(255, 255, 255, 0.8);
-   --text--unactive-color: rgba(255, 255, 255, .6);
+   --text-unactive-color: rgba(255, 255, 255, .6);
 
 
    /* -------------------- Другие цвета */
    --geld-100: rgba(255, 221, 0, 1);
    --geld-80: rgba(255, 221, 0, .8);
    --geld-60: rgba(255, 221, 0, .6);
+   --geld-20: rgba(255, 221, 0, .2);
    --geld-10: rgba(255, 221, 0, .1);
 
-   --orange-light-1: rgba(233, 160, 109, 1);
-   --orange-dark-1: rgba(126, 70, 30, 1);
+   --orange-light-100: rgba(233, 160, 109, 1);
+   --orange-light-80: rgba(233, 160, 109, .8);
+   --orange-light-60: rgba(233, 160, 109, .6);
+   --orange-light-20: rgba(233, 160, 109, .2);
+   --orange-light-10: rgba(233, 160, 109, .1);
 
-   --salad-light-1: rgba(204, 233, 109, 1);
-   --salad-dark-1: rgb(96, 125, 0, 1);
+   --orange-dark-100: rgba(126, 70, 30, 1);
+   --orange-dark-80: rgba(126, 70, 30, .8);
+   --orange-dark-60: rgba(126, 70, 30, .6);
+   --orange-dark-20: rgba(126, 70, 30, .2);
+   --orange-dark-10: rgba(126, 70, 30, .1);
+
+   --salad-light-100: rgba(204, 233, 109, 1);
+   --salad-light-80: rgba(204, 233, 109, .8);
+   --salad-light-60: rgba(204, 233, 109, .6);
+   --salad-light-20: rgba(204, 233, 109, .2);
+   --salad-light-10: rgba(204, 233, 109, .1);
+
+   --salad-dark-100: rgb(96, 125, 0, 1);
+   --salad-dark-80: rgb(96, 125, 0, .8);
+   --salad-dark-60: rgb(96, 125, 0, .6);
+   --salad-dark-20: rgb(96, 125, 0, .2);
+   --salad-dark-10: rgb(96, 125, 0, .1);
 
    --green-light-100: rgba(170, 255, 118, 1);
    --green-light-80: rgba(170, 255, 118, .8);
@@ -122,7 +153,14 @@
    --green-light-30: rgba(170, 255, 118, .3);
    --green-light-10: rgba(170, 255, 118, .1);
 
-   --brand-color-main: linear-gradient(to right, rgba(34, 195, 255, 1), rgba(0, 143, 245, 1));
+   --brand-color-main-1: linear-gradient(to right, rgba(34, 195, 255, 1), rgba(0, 143, 245, 1));
+   --brand-color-main-1_10: linear-gradient(to right, rgba(34, 195, 255, .1), rgba(0, 143, 245, .1));
+   --brand-color-main-1_20: linear-gradient(to right, rgba(34, 195, 255, .2), rgba(0, 143, 245, .2));
+   --brand-color-main-2: linear-gradient(to right, rgba(255, 47, 141, 1), rgba(177, 54, 164, 1));
+   --brand-color-main-2_20: linear-gradient(to right, rgba(255, 47, 141, .2), rgba(177, 54, 164, .2));
+   --brand-color-main-3: linear-gradient(to right, rgba(34, 195, 255, 1), rgba(177, 54, 164, 1));
+
+
    --brand-color-main-10: linear-gradient(to right, rgba(34, 195, 255, .1), rgba(0, 143, 245, .1));
 
 

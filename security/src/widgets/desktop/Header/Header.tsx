@@ -1,5 +1,5 @@
-import { ButtonLink, Button } from "../../../shared/ui/general/index";
-import { CoffeeSVG, SettingsSVG, ReliabilitySVG } from "../../../shared/icons/index";
+import { ButtonHref, ButtonAction } from "../../../shared/ui/buttons";
+import { CoffeeSVG, SettingsSVG, ReliabilitySVG } from "../../../shared/icons";
 
 import "./Header.css";
 
@@ -38,21 +38,13 @@ const Header = () => {
                   <img className="search__icon" src="/icons/search.svg" alt="" />
                   <input className="search__input" type="text" name="" id="" placeholder="Введите пароль для проверки его надежности от взлома" />
                </div>
-               <Button
-                  boxClass="button_reliability"
-                  iconSize={16}
-                  onClick={() => { }}
-                  radius="_border_circle"
-                  text="Проверить"
-               >
-                  <ReliabilitySVG />
-               </Button>
+               <ButtonHref href='#' iconSize={16} text='Проверить' sView='btn-custom_green' sH='btn_h_fill' sR='btn_r_half'><ReliabilitySVG /></ButtonHref>
             </div>
          </div>
 
          <div className="header__right">
-            <ButtonLink boxClass="donation donation_long" href={coffeHref} text="Купи мне кофе" iconSize={16}><CoffeeSVG /></ButtonLink>
-            <Button boxClass="button_settings" iconSize={20} onClick={(): void => console.log('Settings.')}><SettingsSVG /></Button>
+            <ButtonHref href={coffeHref} iconSize={16} text='Купи мне кофе' sView='btn-custom_geld' sH='btn_h_fill'><CoffeeSVG /></ButtonHref>
+            <ButtonAction onClick={(): void => console.log('Settings.')} iconSize={20} sView='btn_normal' sH='btn_h_fill'><SettingsSVG /></ButtonAction>            {/* <ButtonLink href={coffeHref} iconSize={16} text="Купи мне кофе" sH='btn_h_30' sType='btn-custom_geld'><CoffeeSVG /></ButtonLink> */}
          </div>
 
       </header>

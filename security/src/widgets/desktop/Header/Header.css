@@ -43,7 +43,7 @@
 }
 
 .header__right {
-   height: 100%;
+   height: 30px;
 
    display: flex;
    gap: 12px;
@@ -114,12 +114,12 @@
 .navi-link span {
    font-size: 14px;
    font-weight: 500;
-   color: var(--text--unactive-color);
+   color: var(--text-unactive-color);
 }
 
 .navi-link._navi-link-active {
    border-color: var(--border-color-main);
-   background-color: var(--block-bg-1);
+   background-color: var(--block-bg-unactive);
 
    -webkit-backdrop-filter: var(--blur-main);
    backdrop-filter: var(--blur-main);
@@ -130,7 +130,7 @@
 }
 
 .navi-link.navi-link_brand span {
-   background: var(--brand-color-main);
+   background: var(--brand-color-main-1);
    -webkit-background-clip: text;
    background-clip: text;
    color: transparent;
@@ -140,14 +140,14 @@
    .navi-link:not(._navi-link-active):hover {
       color: var(--text-color);
       border-color: var(--border-color-main);
-      background-color: var(--block-bg-1);
+      background-color: var(--block-bg-unactive);
 
       -webkit-backdrop-filter: var(--blur-main);
       backdrop-filter: var(--blur-main);
    }
 
    .navi-link.navi-link_brand:not(._navi-link-active):hover {
-      background: var(--brand-color-main-10);
+      background: var(--brand-color-main-1_10);
    }
 }
 
@@ -161,16 +161,17 @@
    justify-content: start;
    gap: 12px;
 
+   height: 30px;
    flex: 1 1 100%;
 }
 
 .search-box {
    padding: var(--indent-4) var(--indent-3) var(--indent-4) var(--indent-4);
-   height: 30px;
+   height: 100%;
    border-radius: 100px;
 
    border: var(--border-size-main) solid var(--border-color-main);
-   background-color: var(--block-bg-1);
+   background-color: var(--block-bg-unactive);
 
    -webkit-backdrop-filter: var(--blur-main);
    backdrop-filter: var(--blur-main);
@@ -194,8 +195,10 @@
    width: 100%;
    height: 100%;
 
+   font-family: "Sometype Mono", sans-serif;
    font-size: 12px;
-   font-weight: 500;
+   font-weight: 400;
+   letter-spacing: 0.05rem;
    color: var(--text-color);
 }
 
