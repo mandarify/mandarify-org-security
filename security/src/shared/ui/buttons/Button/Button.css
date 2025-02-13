@@ -24,9 +24,13 @@
 
 /* ICON */
 
-.button path {
-   fill: var(--text-unactive-color);
-   transition: fill var(--button-animation), stroke var(--button-animation);
+.button {
+
+   path,
+   circle {
+      fill: var(--text-unactive-color);
+      transition: fill var(--button-animation), stroke var(--button-animation);
+   }
 }
 
 /* TEXT */
@@ -74,8 +78,12 @@
    background-color: var(--block-bg-unactive);
 }
 
-.btn_normal path {
-   fill: var(--text-unactive-color);
+.btn_normal {
+
+   path,
+   circle {
+      fill: var(--text-unactive-color);
+   }
 }
 
 .btn_normal .button__text {
@@ -90,9 +98,13 @@
       background-color: var(--block-bg-hover);
    }
 
-   .btn_normal:hover path,
-   .btn_transparent:hover path {
-      fill: var(--text-color);
+   .btn_normal:hover,
+   .btn_transparent:hover {
+
+      path,
+      circle {
+         fill: var(--text-color);
+      }
    }
 
    .btn_normal:hover .button__text,
@@ -103,18 +115,22 @@
 
 @media (hover: none) {
 
-   .btn_normal:active,
-   .btn_transparent:active {
+   .btn_normal:hover,
+   .btn_transparent:hover {
       background-color: var(--block-bg-hover);
    }
 
-   .btn_normal:active path,
-   .btn_transparent:active path {
-      fill: var(--text-color);
+   .btn_normal:hover,
+   .btn_transparent:hover {
+
+      path,
+      circle {
+         fill: var(--text-color);
+      }
    }
 
-   .btn_normal:active .button__text,
-   .btn_transparent:active .button__text {
+   .btn_normal:hover .button__text,
+   .btn_transparent:hover .button__text {
       color: var(--text-color);
    }
 }
@@ -126,9 +142,13 @@
    background-color: var(--block-bg-unactive);
 }
 
-.btn_orange path {
-   stroke: var(--border-size-icon) solid var(--orange-dark-80);
-   fill: var(--orange-light-80);
+.btn_orange {
+
+   path,
+   circle {
+      stroke: var(--border-size-icon) solid var(--orange-dark-80);
+      fill: var(--orange-light-80);
+   }
 }
 
 .btn_orange .button__text {
@@ -143,9 +163,13 @@
       background-color: var(--block-bg-hover);
    }
 
-   .btn_orange:hover path {
-      stroke: var(--border-size-icon) solid var(--orange-dark-100);
-      fill: var(--orange-light-100);
+   .btn_orange:hover {
+
+      path,
+      circle {
+         stroke: var(--border-size-icon) solid var(--orange-dark-100);
+         fill: var(--orange-light-100);
+      }
    }
 
    .btn_orange:hover .button__text {
@@ -154,9 +178,13 @@
 }
 
 @media (hover: none) {
-   .btn_orange:active path {
-      stroke: var(--border-size-icon) solid var(--orange-dark-100);
-      fill: var(--orange-light-100);
+   .btn_orange:active {
+
+      path,
+      circle {
+         stroke: var(--border-size-icon) solid var(--orange-dark-100);
+         fill: var(--orange-light-100);
+      }
    }
 
    .btn_orange:active .button__text {
@@ -365,12 +393,20 @@
    width: 100%;
 }
 
+.button.btn_w_fill {
+   padding: 0;
+}
+
 .btn_h_max {
    height: max-content;
 }
 
 .btn_h_fill {
    height: 100%;
+}
+
+.button.btn_h_fill {
+   padding: 0;
 }
 
 .btn_h_30 {

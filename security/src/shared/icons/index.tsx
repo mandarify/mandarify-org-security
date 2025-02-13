@@ -6,6 +6,8 @@ import LogoSVG from "./svg/Logo.svg";
 import SettingsSVG from "./svg/Settings.svg";
 import ReliabilitySVG from "./svg/Reliability.svg";
 import RocketSVG from "./svg/Rocket.svg";
+import LockSVG from "./svg/Lock.svg";
+import EyeOpenSVG from "./svg/EyeOpen.svg";
 
 export {
    CoffeeSVG,
@@ -15,5 +17,7 @@ export {
    LogoSVG,
    SettingsSVG,
    ReliabilitySVG,
-   RocketSVG
+   RocketSVG,
+   LockSVG,
+   EyeOpenSVG
 };

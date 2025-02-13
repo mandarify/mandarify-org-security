@@ -155,7 +155,7 @@
    Search reliability
 ==================================== */
 
-.reliability {
+/* .reliability {
    display: flex;
    align-items: center;
    justify-content: start;
@@ -204,7 +204,7 @@
 
 .search__input::placeholder {
    color: rgba(255, 255, 255, .4);
-}
+} */
 
 /* =================================
    MEDIA

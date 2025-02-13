@@ -2,6 +2,7 @@ import { ButtonHref, ButtonAction } from "../../../shared/ui/buttons";
 import { CoffeeSVG, SettingsSVG, ReliabilitySVG } from "../../../shared/icons";
 
 import "./Header.css";
+import { SearchReliability } from "../../general";
 
 const coffeHref = 'https://buymeacoffee.com/mandarify';
 
@@ -10,7 +11,7 @@ const Header = () => {
       <header className="header">
 
          <div className="header__left">
-            <a className="logo _unselect" href="/">
+            <a className="logo _unselect" href="/" tabIndex={-1}>
                <img className="logo__icon" src="/logo/logo.svg" alt="Логотип инстурмента Security." />
                <span className="logo__name" translate="no">security</span>
             </a>
@@ -33,18 +34,14 @@ const Header = () => {
                   </li>
                </ul>
             </nav>
-            <div className="reliability">
-               <div className="search-box">
-                  <img className="search__icon" src="/icons/search.svg" alt="" />
-                  <input className="search__input" type="text" name="" id="" placeholder="Введите пароль для проверки его надежности от взлома" />
-               </div>
-               <ButtonHref href='#' iconSize={16} text='Проверить' sView='btn-custom_green' sH='btn_h_fill' sR='btn_r_half'><ReliabilitySVG /></ButtonHref>
-            </div>
+
+            <SearchReliability />
+
          </div>
 
          <div className="header__right">
-            <ButtonHref href={coffeHref} iconSize={16} text='Купи мне кофе' sView='btn-custom_geld' sH='btn_h_fill'><CoffeeSVG /></ButtonHref>
-            <ButtonAction onClick={(): void => console.log('Settings.')} iconSize={20} sView='btn_normal' sH='btn_h_fill'><SettingsSVG /></ButtonAction>            {/* <ButtonLink href={coffeHref} iconSize={16} text="Купи мне кофе" sH='btn_h_30' sType='btn-custom_geld'><CoffeeSVG /></ButtonLink> */}
+            <ButtonHref href={coffeHref} iconSize={16} text='Купи мне кофе' sView='btn-custom_geld'><CoffeeSVG /></ButtonHref>
+            <ButtonAction onClick={(): void => console.log('Settings.')} iconSize={20} sView='btn_normal'><SettingsSVG /></ButtonAction>            {/* <ButtonLink href={coffeHref} iconSize={16} text="Купи мне кофе" sH='btn_h_30' sType='btn-custom_geld'><CoffeeSVG /></ButtonLink> */}
          </div>
 
       </header>

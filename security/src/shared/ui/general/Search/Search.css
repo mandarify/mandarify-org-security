@@ -1,0 +1,116 @@
+/* =================================
+    
+==================================== */
+
+.search {
+   position: relative;
+   width: 100%;
+   height: 100%;
+
+   --search-animation: var(--duration-s) ease-in;
+}
+
+/* Input */
+
+.search__input {
+   padding: 2px 36px;
+   width: 100%;
+   height: 100%;
+
+   border: var(--border-size-main) solid var(--border-color-main);
+   border-radius: 100px;
+   background: var(--block-bg-unactive);
+   -webkit-backdrop-filter: var(--blur-main);
+   backdrop-filter: var(--blur-main);
+
+   font-family: var(--f-family-2);
+   font-size: 12px;
+   font-weight: 400;
+   letter-spacing: 0.04rem;
+   color: var(--accent-color);
+
+   transition: border-color var(--search-animation);
+}
+
+.search__input::placeholder {
+   color: var(--text-unactive-2-color);
+}
+
+.search__input:focus {
+   border-color: var(--green-light-60);
+}
+
+/* Icons */
+
+.search__icon {
+   position: absolute;
+   width: 20px;
+   height: 20px;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.search__icon_lock {
+   width: 20px;
+   height: 20px;
+   top: 4px;
+   left: 8px;
+}
+
+.search__icon_lock {
+
+   path,
+   circle {
+      fill: var(--text-unactive-2-color);
+      transition: fill var(--search-animation);
+   }
+}
+
+.search__input:focus+.search__icon_lock {
+
+   path,
+   circle {
+      fill: var(--green-light-80);
+   }
+}
+
+.search__icon_eye {
+   width: 22px;
+   height: 22px;
+   top: 4px;
+   right: 4px;
+}
+
+/* =================================
+   MEDIA
+==================================== */
+
+@media (hover: hover) {
+   .search__input:hover:not(:focus) {
+      border-color: var(--green-light-30);
+   }
+
+   .search__input:hover:not(:focus)+.search__icon_lock {
+
+      path,
+      circle {
+         fill: var(--green-light-60);
+      }
+   }
+}
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 500px) {}
+
+@media (max-width: 425px) {}
+
+@media (max-width: 375px) {}
+
+@media (max-width: 320px) {}
+
+/* ============ END :) ============ */

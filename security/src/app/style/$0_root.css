@@ -13,6 +13,8 @@
    --f-weight: 400;
    --f-style: normal;
 
+   --f-family-2: "Sometype Mono", sans-serif;
+
    /* ===================================
       Z-index
    ====================================== */
@@ -114,6 +116,7 @@
    --accent-color: rgba(255, 255, 255, 1);
    --text-color: rgba(255, 255, 255, 0.8);
    --text-unactive-color: rgba(255, 255, 255, .6);
+   --text-unactive-2-color: rgba(255, 255, 255, .4);
 
 
    /* -------------------- Другие цвета */

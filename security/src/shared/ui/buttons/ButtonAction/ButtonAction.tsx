@@ -29,7 +29,7 @@ const ButtonActio = ({
    const textClasses: string = cn('button__text');
 
    return (
-      <div className={btnClasses} onClick={onClick}>
+      <div className={btnClasses} onClick={onClick} tabIndex={0}>
          {children && <SvgIcon iconSize={iconSize}>{children}</SvgIcon>}
          {text && <span className={textClasses}>{text}</span>}
       </div>
