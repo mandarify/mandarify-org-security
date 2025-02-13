@@ -11,7 +11,7 @@ const SearchReliability = () => {
 
    const onChangeValue = useCallback((newValue: string) => {
       setValue(newValue);
-      console.log(newValue);
+      console.log(value);
    }, []);
 
    return (

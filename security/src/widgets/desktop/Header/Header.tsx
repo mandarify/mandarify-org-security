@@ -1,5 +1,5 @@
 import { ButtonHref, ButtonAction } from "../../../shared/ui/buttons";
-import { CoffeeSVG, SettingsSVG, ReliabilitySVG } from "../../../shared/icons";
+import { CoffeeSVG, SettingsSVG } from "../../../shared/icons";
 
 import "./Header.css";
 import { SearchReliability } from "../../general";
