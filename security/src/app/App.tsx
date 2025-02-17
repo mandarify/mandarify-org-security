@@ -1,23 +1,31 @@
 import { Header as DesktopHeader } from "../widgets/desktop/index";
+import { BrowserRouter } from "react-router-dom";
+import AppLocation from "./location/AppLocation";
+import AppRouter from "./router/AppRouter";
 
 
-function App() {
+const AppContent = () => {
+
+   console.log('%c🔥 Application\n', 'color: tomato; font-size: 15px; font-weight: bold;');
 
    return (
       <>
-
          <DesktopHeader />
-
-         <div className="app">
-            <div className="app-container">
-               <main className="main">
-                  <h1>SECURITY</h1>
-               </main>
-            </div>
-         </div>
-
+         <AppRouter />
       </>
-   )
-}
+   );
+};
+
+const App = () => {
+   return (
+      <BrowserRouter>
+         <AppLocation>
+
+            <AppContent />
+
+         </AppLocation>
+      </BrowserRouter>
+   );
+};
 
 export default App

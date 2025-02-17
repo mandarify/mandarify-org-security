@@ -5,11 +5,11 @@ import cn from "classnames";
 import "../Button/Button.css";
 
 export interface IButtonAction extends IButton {
-   onClick: () => void,
+   onClick?: () => void,
 }
 
 
-const ButtonActio = ({
+const ButtonAction = ({
    children = null,
 
    text = '',
@@ -21,12 +21,15 @@ const ButtonActio = ({
    sW = 'btn_w_max',
    sR = 'btn_r_auto',
 
-   onClick,
+   onClick = () => { },
 
 }: IButtonAction) => {
 
-   const btnClasses: string = cn('button', boxClass, sView, sH, sW, sR, '_unselect');
-   const textClasses: string = cn('button__text');
+   console.log('%c\t\t📄 UI: ButtonAction', 'color: white; font-size: 12px;');
+
+
+   const btnClasses = cn('button', boxClass, sView, sH, sW, sR, '_unselect');
+   const textClasses = cn('button__text');
 
    return (
       <div className={btnClasses} onClick={onClick} tabIndex={0}>
@@ -37,4 +40,4 @@ const ButtonActio = ({
 };
 
 
-export default memo(ButtonActio);
+export default memo(ButtonAction);

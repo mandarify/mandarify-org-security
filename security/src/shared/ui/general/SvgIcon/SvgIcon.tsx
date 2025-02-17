@@ -1,4 +1,5 @@
-import { JSX, memo, useRef, useEffect } from "react";
+import { JSX, memo, useRef, useEffect, useMemo } from "react";
+import cn from "classnames";
 import "./SvgIcon.css";
 
 
@@ -11,6 +12,10 @@ export interface ISvgIcon {
 
 const SvgIcon = ({ children, boxClass = '', iconSize = 16 }: ISvgIcon) => {
 
+   console.log('%c\t\t📄 UI: SvgIcon', 'color: white; font-size: 12px;');
+
+
+   const iconClass: string = useMemo(() => cn('icon-svg-box', boxClass), [boxClass]);
    const svgBox = useRef<HTMLDivElement>(null);
 
    useEffect(() => {
@@ -20,7 +25,7 @@ const SvgIcon = ({ children, boxClass = '', iconSize = 16 }: ISvgIcon) => {
       }
    }, [iconSize]);
 
-   return <div className={`icon-svg-box ${boxClass}`} ref={svgBox}>{children}</div>;
+   return <div className={iconClass} ref={svgBox}>{children}</div>;
 };
 
 

@@ -24,6 +24,9 @@ const ButtonHref = ({
 
 }: IButtonHref) => {
 
+   console.log('%c\t\t📄 UI: ButtonHref', 'color: white; font-size: 12px;');
+
+
    const target: string = href == '#' ? '_self' : '_blank';
    const btnClasses: string = cn('button', boxClass, sView, sH, sW, sR, '_unselect');
    const textClasses: string = cn('button__text');
